@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>.catch</title>
+    <style>
+@keyframes colors{
+    0%{
+        background-color: black;
+    }
+    10%{
+        background-color: yellow;
+    }
+    20%{
+        background-color: red;
+    }
+    30%{
+        background-color: blue;
+    }
+    40%{
+        background-color: pink;
+    }
+    50%{
+        background-color: brown;
+    }
+    60%{
+        background-color: orange;
+    }
+    70%{
+        background-color: aqua;
+    }
+    80%{
+        background-color: teal;
+    }
+    90%{
+        background-color: greenyellow;
+    }
+    100%{
+        background-color: gold;
+    }
+  
+}
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+                                                
+        }
+        body{
+            background-color:rgb(240, 238, 241);
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 4em;
+            color: whitesmoke;
+        }
+        button {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            font-size: medium;
+            width: 120px;
+            text-align: center;
+            border: none;
+            background-color: rgb(14, 219, 219);
+            color: whitesmoke;
+            font-size: 2em;
+            border-radius:43px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(43, 189, 189);
+        }
+        button:active{
+            cursor: pointer;
+            background-color: rgb(57, 141, 141);
+        }
+    
+        .area{
+            z-index: 0;
+            background-color:rgb(240, 238, 241);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 90vh;
+            
+            
+        }
+        header{
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            background-color:rgb(240, 238, 241);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 75px;
+            box-shadow: 0 6px 8px -6px black;
+        }
+        .playground {
+            
+            display: flex;
+            background-color: #fdfbfe;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.62'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            
+            position: relative;
+            margin-top: 150px;
+            width: 1840px;
+            height: 840px;
+            width: 90%;
+            height: 90%;
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        }
+        .circle{
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            animation: colors 10s infinite;
+            
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        ins{
+            width: 100px;
+            height: 100px;
+        }
+        .footer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  background-color:rgb(240, 238, 241);
+  height: 50px;
+  bottom: 0;
+  box-shadow: 8 6px 8px -6px black;
+
+
+}
+.fa-brands{
+  margin-left: 40px;
+  margin-right: 40px;
+}   
+
+@media screen and (max-width:600px) {
+    .logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 2em;
+            color: whitesmoke;
+        }
+        button {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            font-size: medium;
+            width: 80px;
+            text-align: center;
+            border: none;
+            background-color: rgb(14, 219, 219);
+            color: whitesmoke;
+            font-size: 1em;
+            border-radius:43px;
+        }
+    
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/"><div class="logo" style="color: black;"><div class="circle"></div>catch</div></a>
+        <button onclick="start()"  id="button">Start</button>
+        <button onclick="finish()" id="finish">Finish</button>
+    </header>
+    <section class="area">
+        <div class="playground"></div>
+
+        <div class="footer">
+            <a href="https://github.com/CaganDerbent"><i class="fa-brands fa-github fa-2xl" style="color:rgb(10, 180, 180);"></i></a>
+            <a href="https://www.linkedin.com/in/cagan-derbent-61536727a/"><i class="fa-brands fa-linkedin fa-2xl" style="color:rgb(10, 180, 180);"></i></a>
+        </div>
+        
+    </section>
+    <script>
+        var playground = document.querySelector(".playground");
+var button = document.getElementById("button");
+var shape = document.createElement("div");
+var i = 100;
+var timerVar = setInterval(timer, 1000);
+var totalSeconds = 0;
+
+function timer(){
+    totalSeconds = totalSeconds +1;
+}
+
+var audio = new Audio('/views/ax.mp3')
+function start(){
+   // var x = (Math.random() * 1840);
+    //var y = (Math.random() * 840);
+    //shape.style.top = y+"px";
+//    shape.style.left = x+"px";
+
+
+
+    var x = (Math.random() * 80);
+    var y = (Math.random() * 80);
+    shape.style.top = y+"%";
+    shape.style.left = x+"%";
+    shape.style.position = "absolute";
+    shape.style.background = "red";
+    shape.style.width = "50px";
+    shape.style.height = "50px";
+    shape.style.borderRadius = "50px";
+    playground.append(shape);
+    document.getElementById("button").disabled = "True";
+
+
+    
+}
+
+var i = 0;
+function dest(){
+    i = i + 1;
+    var z = Math.floor(Math.random() * 300);
+    var z1 = Math.floor(Math.random() * 300);
+    var z2 = Math.floor(Math.random() * 300);
+    var x = (Math.random() * 80);
+    var y = (Math.random() * 80);
+    console.log(i)
+    shape.style.position = "absolute";
+    shape.style.top = y+"%";
+    shape.style.left = x+"%";
+
+    shape.style.background = 'rgb(' + z + "," + z1 + "," + z2 + ")";
+    console.log(z,z1,z2)
+    
+
+}
+function finish(){
+    window.alert("Total: "+i+"\n"+"Time: "+totalSeconds);
+    
+    location.reload()
+
+}
+
+shape.addEventListener("click",dest)
+
+
+    </script>
+
+    
+  
+</body>
+</html>
